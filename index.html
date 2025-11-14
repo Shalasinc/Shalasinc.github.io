@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درگاه دانشگاهی | ورود</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        violet: {
+                            500: '#8b5cf6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white min-h-screen flex items-center justify-center p-4">
+    <main class="w-full max-w-md">
+        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8 shadow-2xl">
+            <div class="text-center mb-8">
+                <i data-feather="book-open" class="w-12 h-12 mx-auto text-violet-500"></i>
+                <h1 class="text-3xl font-bold mt-4 tracking-tight">پرتال دانشگاه</h1>
+                <p class="text-white/70 mt-2">دسترسی به منابع دانشگاهی</p>
+            </div>
+
+            <div class="space-y-4">
+                <button id="studentBtn" class="w-full flex items-center justify-between bg-black text-white px-6 py-4 rounded-lg border border-white/10 hover:border-violet-500 transition-all duration-300 group">
+                    <span class="font-medium">ورود دانشجو</span>
+                    <i data-feather="chevron-right" class="w-5 h-5 group-hover:text-violet-500 transition-colors"></i>
+                </button>
+
+                <button id="facultyBtn" class="w-full flex items-center justify-between bg-black text-white px-6 py-4 rounded-lg border border-white/10 hover:border-violet-500 transition-all duration-300 group">
+                    <span class="font-medium">ورود اعضای هیئت‌علمی</span>
+                    <i data-feather="chevron-right" class="w-5 h-5 group-hover:text-violet-500 transition-colors"></i>
+                </button>
+            </div>
+
+            <!-- Student Login Form (Hidden by default) -->
+            <div id="studentForm" class="hidden mt-6">
+                <form class="space-y-4">
+                    <div>
+                            <label for="studentId" class="block text-sm font-medium mb-1">شماره دانشجویی</label>
+                        <input type="text" id="studentId" class="w-full bg-black/30 border border-white/20 rounded-lg px-4 py-3 focus:border-violet-500 focus:ring-violet-500 outline-none transition">
+                    </div>
+                    <div>
+                        <label for="studentPassword" class="block text-sm font-medium mb-1">رمز عبور</label>
+                        <input type="password" id="studentPassword" class="w-full bg-black/30 border border-white/20 rounded-lg px-4 py-3 focus:border-violet-500 focus:ring-violet-500 outline-none transition">
+                    </div>
+                    <button type="submit" class="w-full bg-violet-600 text-white py-3 rounded-lg font-medium hover:bg-violet-700 transition">ورود</button>
+                </form>
+                <button id="backFromStudent" class="mt-4 text-sm text-white/70 hover:text-violet-500 transition flex items-center">
+                    <i data-feather="chevron-left" class="w-4 h-4 mr-1"></i>
+                    بازگشت
+                </button>
+            </div>
+
+            <!-- Faculty Login Form (Hidden by default) -->
+            <div id="facultyForm" class="hidden mt-6">
+                <form class="space-y-4">
+                    <div>
+                            <label for="facultyId" class="block text-sm font-medium mb-1">شماره کارمندی</label>
+                        <input type="text" id="facultyId" class="w-full bg-black/30 border border-white/20 rounded-lg px-4 py-3 focus:border-violet-500 focus:ring-violet-500 outline-none transition">
+                    </div>
+                    <div>
+                        <label for="facultyPassword" class="block text-sm font-medium mb-1">رمز عبور</label>
+                        <input type="password" id="facultyPassword" class="w-full bg-black/30 border border-white/20 rounded-lg px-4 py-3 focus:border-violet-500 focus:ring-violet-500 outline-none transition">
+                    </div>
+                    <button type="submit" class="w-full bg-violet-600 text-white py-3 rounded-lg font-medium hover:bg-violet-700 transition">ورود</button>
+                </form>
+                <button id="backFromFaculty" class="mt-4 text-sm text-white/70 hover:text-violet-500 transition flex items-center">
+                    <i data-feather="chevron-left" class="w-4 h-4 mr-1"></i>
+                    بازگشت
+                </button>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/10 text-center">
+                <a href="contact.html" class="text-sm text-white/70 hover:text-violet-500 transition inline-flex items-center">
+                    <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+                    تماس با مدیر
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>

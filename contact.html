@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس با مدیر | پرتـال دانشگاهی</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        violet: {
+                            500: '#8b5cf6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white min-h-screen flex items-center justify-center p-4">
+    <main class="w-full max-w-md">
+        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8 shadow-2xl">
+            <div class="flex items-center justify-between mb-6">
+                <a href="index.html" class="text-white/70 hover:text-violet-500 transition flex items-center">
+                    <i data-feather="chevron-left" class="w-5 h-5 mr-1"></i>
+                    بازگشت
+                </a>
+                <h2 class="text-xl font-bold">تماس با مدیر سیستم</h2>
+                <div class="w-5"></div> <!-- Spacer for alignment -->
+            </div>
+
+            <form class="space-y-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium mb-1">نام شما</label>
+                    <input type="text" id="name" class="w-full bg-black/30 border border-white/20 rounded-lg px-4 py-3 focus:border-violet-500 focus:ring-violet-500 outline-none transition">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium mb-1">آدرس ایمیل</label>
+                    <input type="email" id="email" class="w-full bg-black/30 border border-white/20 rounded-lg px-4 py-3 focus:border-violet-500 focus:ring-violet-500 outline-none transition">
+                </div>
+                <div>
+                    <label for="role" class="block text-sm font-medium mb-1">نقش شما</label>
+                    <select id="role" class="w-full bg-black/30 border border-white/20 rounded-lg px-4 py-3 focus:border-violet-500 focus:ring-violet-500 outline-none transition appearance-none">
+                        <option value="">نقش خود را انتخاب کنید</option>
+                        <option value="student">دانشجو</option>
+                        <option value="faculty">عضو هیئت‌علمی</option>
+                        <option value="other">سایر</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium mb-1">پیام</label>
+                    <textarea id="message" rows="4" class="w-full bg-black/30 border border-white/20 rounded-lg px-4 py-3 focus:border-violet-500 focus:ring-violet-500 outline-none transition"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-violet-600 text-white py-3 rounded-lg font-medium hover:bg-violet-700 transition flex items-center justify-center">
+                    <i data-feather="send" class="w-4 h-4 mr-2"></i>
+                    ارسال درخواست
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>
